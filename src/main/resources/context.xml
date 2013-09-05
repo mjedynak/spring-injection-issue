@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+    <bean id="foo" class="pl.mjedynak.SomeClass">
+        <property name="service" ref="fastService"/>
+    </bean>
+    <bean id="bar" class="pl.mjedynak.SomeClass">
+        <property name="service" ref="slowService"/>
+    </bean>
+    <bean id="fastService" class="pl.mjedynak.FastService"/>
+    <bean id="slowService" class="pl.mjedynak.SlowService"/>
+
+</beans>
